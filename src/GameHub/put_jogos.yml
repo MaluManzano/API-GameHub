@@ -1,0 +1,23 @@
+info:
+  name: put_jogos
+  type: http
+
+http:
+  method: PUT
+  url: http://localhost:3000/jogos/3
+  body:
+    type: json
+    data: |-
+      {
+        
+      "titulo" :"minecraft 9.10",
+        "ano_lancamento": 2020,
+       "estudio_id": 1
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

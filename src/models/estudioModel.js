@@ -1,5 +1,4 @@
-
-import conexao from "../../../db.js";
+import conexao from "../../db.js";
 
 export function listar(callback) {
     const sql = "SELECT * FROM estudios ORDER BY id";
@@ -21,7 +20,7 @@ export function atualizar(id, dados, callback) {
     conexao.query(sql, [dados.nome, dados.pais, id], callback);
 }
 
-export function deletar(id, callback) {
+export function excluir(id, callback) {
     const sql = "DELETE FROM estudios WHERE id = ?";
     conexao.query(sql, [id], callback);
 }

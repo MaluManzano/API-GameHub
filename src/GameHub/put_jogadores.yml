@@ -1,0 +1,22 @@
+info:
+  name: put_jogadores
+  type: http
+
+http:
+  method: PUT
+  url: http://localhost:3000/jogadores/1
+  body:
+    type: json
+    data: |-
+      {
+        "nome":"malu",
+        "email":"malu123@gmail.com",
+        "nickname":"malumanzano"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

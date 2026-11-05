@@ -1,0 +1,23 @@
+info:
+  name: criar_jogo
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/jogos/
+  body:
+    type: json
+    data: |-
+      {
+        "titulo" : "Minecraft",
+        "ano_lancamento" : 2016,
+        "estudios_id" : 2
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

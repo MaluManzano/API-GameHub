@@ -1,5 +1,5 @@
 import * as estudioModel from "../models/estudioModel.js";
-import { textoValido } from "../utils/validacoes.js";
+import { textoValido,inteiroPositivo } from "../utils/validacoes.js";
 
 export function listar(req, res, next) {
     estudioModel.listar((erro, resultado) => {
@@ -55,7 +55,7 @@ export function atualizar(req, res, next) {
 }
 
 export function excluir(req, res, next) {
-    estudioModel.deletar(req.id, (erro, resultado) => {
+    estudioModel.excluir(req.id, (erro, resultado) => {
         if (erro) return next(erro);
         if (resultado.affectedRows === 0) {
             return res.status(404).json({ erro: "Estúdio não encontrado" });
